@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSz Box Office Counter</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="./css/counter.css" type="text/css">
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <img src="./images/seattle-comedy-group-logo.png" class="img-fluid" alt="Logo for ComedySportz Seattle"/>
+            <h1>Box Office Counter</h1>
+            <h2>Tickets Remaining:</h2>
+            <p id="seats">69</p>
+
+            <button disabled="disabled" type="button"  id="refund" class="btn btn-danger btn-lg">Refund Ticket</button>
+            <button type="button" id="sell" class="btn btn-success btn-lg">Sell Ticket</button>
+            <br />
+
+            <hr />
+            
+            <h3>Presale Calculator</h3>
+                <!--Note that input type="number" is only available in HTML5-->
+                <p id="preMessage" class="alert alert-info" role="alert">Enter the number of presales in the corresponding boxes. Check your values—the calculate button only works once unless you refresh the page!</p>
+                <label>Goldstar<br /><input type="number" id="goldstar" placeholder="Goldstar"/></label>
+                <br />
+                <label>VBO<br /><input type="number" id="vbo" placeholder="VBO" /></label>
+                <br />
+                <label>Comps<br /><input type="number" id="comps" placeholder="Comps" /></label>
+                <br />
+                <button type="button" id="presales" class="btn btn-primary btn-lg">Calculate Presales</button>
+        </div><!--End Container-->
+        
+    </body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./js/counter.js"></script>
+</html>
