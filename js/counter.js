@@ -69,6 +69,9 @@ function calcPresales() {
             $('#seats').text(seatsRemaining);
             $('#refund').removeAttr("disabled");
             $('#presales').attr("disabled", "disabled");
+            if (seatsRemaining === 0) {
+                $('#sell').attr("disabled", "disabled");
+            }
         }
     }
 }
