@@ -2,7 +2,7 @@
 
 "use strict";
 
-var seatsRemaining = 70;
+var seatsRemaining = 30;
 var totalPresale;
 var goldstar;
 var vbo;
@@ -23,11 +23,11 @@ function sellTicket() {
 }
 
 function refundTicket() {
-    if (seatsRemaining < 70) {
+    if (seatsRemaining < 30) {
         seatsRemaining = seatsRemaining + 1;
         $('#seats').text(seatsRemaining);
         $('#sell').removeAttr("disabled");
-        if (seatsRemaining === 70) {
+        if (seatsRemaining === 30) {
             $('#refund').attr("disabled", "disabled");
         }
     }
@@ -35,7 +35,7 @@ function refundTicket() {
 
 //Enables calculate button again. Changes alert styling.
 function resetValues() {
-    seatsRemaining = 70;
+    seatsRemaining = 30;
     $('#preMessage').text("The number of presales exceeds our seating capacity. Try again!");
     $('#preMessage').removeClass("alert-info");
     $('#preMessage').removeClass("alert-danger");
@@ -57,7 +57,7 @@ function calcPresales() {
         $('#preMessage').addClass("alert-danger");
     } else { //Presales are not empty
         totalPresale = Number($('#goldstar').val()) + Number($('#vbo').val()) + Number($('#comps').val());
-        if (totalPresale > 70) {
+        if (totalPresale > 30) {
             resetValues();
         } else { 
             $('#preMessage').text("Presales calculated! Good luck out there!");
